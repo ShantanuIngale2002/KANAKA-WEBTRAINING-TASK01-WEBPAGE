@@ -1,0 +1,64 @@
+.infoLabel, .editLabel{
+    font-weight: 500!important;
+    margin-top: 2%!important;
+}
+.infoEditIdDiv{
+    color: white;
+    background-color: #086ab0;
+    border-radius: 10px;
+}
+.infoDiv{
+    font-weight: 400px!important;
+}
+.editInput{
+    border: 2px solid #363636;
+}
+.editInput:hover{
+    background-color: #edfdfd;
+    border-color: #8b94c5;
+}
+#profileEditChangeButton:hover{
+    background-color: #024e4bef !important;
+}
+
+/* On edit modal reload we are removing spans so no need here */
+/* .alertSpan{
+    visibility: hidden;
+    position: absolute;
+} */
+
+hr{
+    border-top: 2px solid #009d76;
+    border-radius: 40px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+#roleHrTag{
+    margin: 0px;
+    border-top: 1px solid #0000001a;
+}
+
+
+/* int tel */
+.iti.iti--allow-dropdown{
+    width: 100%;
+}
+.iti-mobile .iti__country-list{
+    max-width: fit-content;
+}
+
+
+/* profile info skill pills */
+.pillSpan{
+    border-radius: 30px;
+}
+
+.crossIcon {
+    /* Style the cross icon */
+    visibility: visible !important;
+    margin-left: 1%;
+    margin-right: 2%;
+    cursor: pointer;
+    /* Show a pointer cursor when hovering over the icon */
+    /* margin-left: 5px; Add some spacing between the text and the icon */
+}

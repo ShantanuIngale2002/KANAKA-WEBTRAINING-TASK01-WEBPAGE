@@ -1,0 +1,51 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #f2f6f5;
+}
+
+@media screen and (max-width:767px) {
+    * {
+        font-size: 0.8rem !important;
+    }
+}
+
+@media screen and (max-width:542px) {
+    * {
+        font-size: 1rem !important;
+    }
+
+    #loginText {
+        font-size: 1.3rem !important;
+    }
+}
+
+@media screen and (max-width:350px) {
+    * {
+        font-size: 0.8rem !important;
+    }
+}
+
+@media screen and (max-width:236px) {
+    * {
+        font-size: 0.7rem !important;
+    }
+}
+
+@media screen and (max-width:185px) {
+    * {
+        font-size: 0.5rem !important;
+    }
+}
+
+@media screen and (max-width:102px) {
+    * {
+        font-size: 0.4rem !important;
+    }
+}
+
+/* to blur body we can do this $('body').(add/remove)Class('blur-effect'); */
+.blur-effect {
+    filter: blur(5px);
+    transition: filter 0.3s ease;
+}

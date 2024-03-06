@@ -1,0 +1,86 @@
+.toastCss {
+    background-color: #e21f50!important;
+}
+
+
+.bg-primary {
+    color: white;
+    background-color: #e21f50 !important;
+}
+
+.col-12 input,
+textarea {
+    border: 2px solid #363636;
+}
+
+.col-12 select {
+    border: 2px solid #363636;
+}
+
+.signupspan {
+    visibility: hidden;
+    position: absolute;
+}
+
+.col-12 select:hover {
+    background-color: #edfdfd;
+    border-color: #8b94c5;
+}
+
+.col-12 input:hover,
+.col-12 textarea:hover {
+    background-color: #edfdfd;
+    border-color: #8b94c5;
+}
+
+.col-12 button:hover {
+    background-color: #024e4bef !important;
+}
+
+.col-12 a:hover {
+    text-decoration: underline !important;
+}
+
+/* int tel */
+.iti.iti--allow-dropdown{
+    width: 100%;
+}
+.iti-mobile .iti__country-list{
+    max-width: fit-content;
+}
+
+/* pills */
+#getModalProgrammingSkill {
+    box-shadow: none;
+    border: 2px solid #363636;
+
+}
+#getModalProgrammingSkill:hover {
+    background-color: #edfdfd;
+    border-color: #8b94c5;
+}
+
+.pillP{
+    font-size: 0.6rem!important;
+    padding: 5px 5px 0px 10px !important;
+}
+.col-4 div {
+    /* Ensure that the div has a fixed width and hides overflow */
+    /* width: 100px; Adjust the width as needed */
+    overflow: hidden;
+    white-space: nowrap;
+    /* Prevent text wrapping */
+    text-overflow: ellipsis;
+    /* Show an ellipsis (...) when text overflows */
+    background-color: #8b94c56a;
+}
+
+.crossIcon {
+    /* Style the cross icon */
+    visibility: visible !important;
+    margin-left: 1%;
+    margin-right: 2%;
+    cursor: pointer;
+    /* Show a pointer cursor when hovering over the icon */
+    /* margin-left: 5px; Add some spacing between the text and the icon */
+}

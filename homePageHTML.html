@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOOGGED IN PAGE</title>
+    <link rel="shortcut icon" href="images/loginFavicon.ico" type="image/x-icon">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- international tel no -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css">
+
+    <link rel="stylesheet" href="style/CommonPageCSS.css">
+    <link rel="stylesheet" href="style/HomePageCSS.css">
+</head>
+
+<body>
+
+    
+    
+    <nav class="navbar navbar-expand navbar-light bg-secondary px-4" style="border-radius:5px 5px 5px 5px;">
+        
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a href="#" class="nav-link text-white">HOME PAGE</a>
+                    <!-- <button type="button" id="homepageanchor" class="btn btn-danger">HOME PAGE</button> -->
+                </li>
+            </ul>
+        </div>
+
+        <div class="btn-group">
+            <div href="" class="navbar-brank m-0">
+                
+                <div class="dropdown">
+                    <button type="button" id="dropdownMenuButton2" class="btn btn-secondary dropdown-toggle dropdown-toggle-split row d-inline-block rounded-4 py-0 bg-dark" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:aqua;border-radius: 20px!important;">
+                        <div class="col-12 px-0 justify-content-center">
+                            <img id="navbarProfilePic" src="" alt="Profile Pic" height="40" width="40">
+                        </div>
+                    </button>
+                    <!-- remove d-inline-block to make it vanish and drop -->
+                    <div class="dropdown-menu dropdown-menu-right row bg-dark p-3" aria-labelledby="dropdownMenuButton2" style="border-radius: 20px!important;">
+                        <!-- <div class="row"> -->
+                            <button type="button" id="profileInfoButton" class="col-12 px-0 my-1 btn btn-secondary text-white" style="border-radius: 20px!important;" data-toggle="modal" data-target="#profileInfoModal">Profile Info</button>
+                            <button type="button" id="profileEditButton" class="col-12 px-0 my-1 btn btn-secondary" style="border-radius: 20px!important;" data-toggle="modal" data-target="#profileEditModal">Edit Profile</button>
+                            <div class="dropdown-divider"></div>
+                            <button type="button" id="profileLogOutButton" class="col-12 px-0 py-2 my-1 btn-info border bg-dark text-warning" style="border-radius: 20px!important;">Log out</button>
+                        <!-- </div> -->
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+
+        <!-- BOOTSTRAP TOAST TO TEMPORARILY INSTRUCT USER -->
+    <div class="d-flex justify-content-center mt-5 align-items-center mx-5">
+        <div id="viewHomeToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-delay="1200">
+            <div class="toast-header">
+              <strong class="mr-auto">Home page Toast</strong>
+            </div>
+            <div class="toast-body">
+                <div class="col-12" id="homeToastMsg">Your message goes here.</div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- PROFILE INFORMATION MODAL STARTS HERE -->
+    <div class="modal fade" id="profileInfoModal" tabindex="-1" aria-labelledby="profileInfoButton" aria-hidden="true">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header mt-4">
+                    <div class="col-12 d-flex justify-content-evenly align-items-center">
+                        <h5 class="modal-title text-dark fw-bolder fs-4 PageTitle">Profile Information</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: absolute; right: 3%;">
+                            <span class="pb-1 px-2 rounded-circle" aria-hidden="true" style="border: 2px solid black; padding-bottom: 1px; ">&times;</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="row px-4 mb-0 d-flex justify-content-center">
+                        <img id="profileInfoPic" src="" alt="" height="80px" width="80px">
+                    </div>
+
+                    <div class="row px-4 mb-2 d-flex justify-content-center">
+                        <span class="infoEditIdDiv px-3">
+                            <span class="px-0 m-0 infoLabel">Profile ID  :
+                                <span class="px-0" style="margin-top: 2%!important;">
+                                    <span id="profileInfoID"> id</span>
+                                    <!-- <hr> -->
+                                </span>
+                            </span>
+                        </span>
+                    </div>
+
+
+                    <div class="row px-4">
+
+                        <div class="col-12 col-sm-6">
+                            <label class="col-12 px-0 m-0 text-center infoLabel">User Email :</label>
+                            <div class="col p-0 mx-0 text-center infoDiv" id="profileInfoEmail">email</div>
+                            <hr>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <label class="col-12 px-0 m-0 text-center infoLabel">Role :</label>
+                            <div class="col p-0 mx-0 text-center infoDiv" id="profileInfoRole">role</div>
+                            <hr>
+                        </div>
+                    </div>
+
+                    <div class="row px-4">
+
+                        <div class="col-12 col-sm-6">
+                            <label class="col-12 px-0 m-0 text-center infoLabel">Name :</label>
+                            <div class="col p-0 mx-0 text-center infoDiv" id="profileInfoName">xyz</div>
+                            <hr>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <label class="col-12 px-0 m-0 text-center infoLabel">Contact No :</label>
+                            <div class="col p-0 mx-0 text-center infoDiv" id="profileInfoContact">xxxxxxxx</div>
+                            <hr>
+                        </div>
+
+                    </div>
+
+                    <div class="row px-4">
+
+                        <div class="col-12 col-sm-6">
+                            <label class="col-12 px-0 m-0 text-center infoLabel">Date of Birth :</label>
+                            <div class="col p-0 mx-0 text-center infoDiv" id="profileInfoDOB">dob</div>
+                            <hr>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <label class="col-12 px-0 m-0 text-center infoLabel">Gender :</label>
+                            <div class="col p-0 mx-0 text-center infoDiv" id="profileInfoGender">gender</div>
+                            <hr>
+                        </div>
+
+                    </div>
+
+                    <div class="row px-4">
+                        
+                        <div class="col-12 col-sm-6">
+                            <label class="col-12 px-0 m-0 text-center infoLabel">Language :</label>
+                            <div class="col p-0 mx-0 text-center infoDiv" id="profileInfoLanguage">defuault</div>
+                            <hr>
+                        </div>
+                        
+                        <div class="col-12 col-sm-6">
+                            <label class="col-12 px-0 m-0 text-center infoLabel">Address :</label>
+                            <div class="col p-0 mx-0 text-center infoDiv" id="profileInfoAddress">addressfull</div>
+                            <hr>
+                        </div>
+
+                    </div>
+                    
+                    <div class="row px-4">
+                        <label class="col-12 px-0 m-0 text-center infoLabel">Skills Selected :</label>
+                        <!-- <div class="col p-0 mx-0 text-center infoDiv" id="profileInfoSkills">iDuuno</div> -->
+                        <div class="col-12 px-3 d-flex justify-content-evenly flex-wrap gap-2 text-nowrap" id="profileInfoSkillPills"></div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- PROFILE INFORMATION MODAL ENDS HERE -->
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- PROFILE EDIT SECTION MODAL STARTS HERE -->
+    <div class="modal fade" id="profileEditModal" tabindex="-1" aria-labelledby="profileEditButton" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header mt-4">
+                    <div class="col-12 d-flex justify-content-evenly align-items-center">
+                        <h5 class="modal-title text-dark fw-bolder fs-4 PageTitle">Profile Edit Section</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: absolute; right: 3%;">
+                            <span class="pb-1 px-2 rounded-circle" aria-hidden="true" style="border: 2px solid black; padding-bottom: 1px;">&times;</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="modal-body">
+
+                    <!-- <div class="row px-4 mb-3 d-flex justify-content-center">
+                        <label class="px-0 m-0 text-start infoLabel">Profile ID :</label>
+                        <div class="px-0 mx-2 text-center" style="margin-top: 2%!important;">
+                            <span class="infoEditIdDiv px-3" id="profileEditID">id</span>
+                        </div>
+                    </div> -->
+
+                    <div class="row px-4">
+
+                        <div class="col-12 col-sm-6">
+                            <!-- <hr> -->
+                            <label class="col-12 px-0 m-0 text-start editLabel">First Name :</label>
+                            <!-- <div class="col-12 px-0 m-0" id="editInfoName">prevName</div> -->
+                            <input type="text" class="col p-2  mx-0 rounded editInput" id="profileEditFname"></input>
+                            <span id="editfnamespan" class="col-12 px-2 text-start mb-1 alertSpan" style="font-weight: 400; color: #ff0000;">Enter a valid name</span>
+                        </div>
+
+                        <div class="col-12 col-sm-6">
+                            <!-- <hr> -->
+                            <label class="col-12 px-0 m-0 text-start editLabel">Last Name (opt) :</label>
+                            <!-- <div class="col-12 px-0 m-0" id="editInfoName">prevName</div> -->
+                            <input type="text" class="col p-2  mx-0 rounded editInput" id="profileEditLname"></input>
+                            <span id="editlnamespan" class="col-12 px-2 text-start mb-1 alertSpan" style="font-weight: 400; color: #ff0000;">Enter a valid name</span>
+                       </div>
+
+                    </div>
+
+                    <div class="row px-4">
+
+                        <div class="col-12 col-sm-6">
+                            <label class="col-12 px-0 m-0 text-start editLabel">User Email :</label>
+                            <!-- <div class="col-12 px-0 m-0" id="editInfoEmail">prevEmail</div> -->
+                            <input type="email" class="col p-2 mx-0 rounded editInput" id="profileEditEmail" placeholder="Change email here"></input>
+                            <span id="editemailspan" class="col-12 px-2 text-start mb-1 alertSpan" style="font-weight: 400; color: #ff0000;">Enter a valid email</span>
+                        </div>
+
+                        <div class="col-12 col-sm-6">
+                            <!-- <hr> -->
+                            <label class="col-12 px-0 m-0 text-start editLabel">Contact No :</label>
+                            <!-- <div class="col-12 px-0 m-0" id="editInfoContact">prevContact</div> -->
+                            <input type="tel" class="col py-2 mx-0  rounded editInput" id="profileEditContact"></input>
+                            <span id="editcontactspan" class="col-12 px-2 text-start mb-1 alertSpan" style="font-weight: 400; color: #ff0000;">Enter a valid contact</span>
+                        </div>
+
+                    </div>
+
+                    <div class="row px-4">
+
+                        <div class="col-12 col-sm-6">
+                            <label class="col-12 px-0 m-0 text-start editLabel">Date of Birth :</label>
+                            <!-- <div class="col-12 px-0 m-0" id="editInfoDOB">prevDOB</div> -->
+                            <input type="date" class="col py-2 mx-0  rounded editInput" id="profileEditDOB"></input>
+                            <span id="editdobspan" class="col-12 px-2 text-start mb-1 alertSpan" style="font-weight: 400; color: #ff0000;">Enter a valid DOB</span>
+                        </div>
+
+                        <div class="col-12 col-sm-6">
+                            <!-- <hr> -->
+                            <label class="col-12 px-0 m-0 text-start editLabel">Language :</label>
+                            <!-- <div class="col-12 px-0 m-0" id="editInfoLanguage">prevLang</div> -->
+                            <select name="" class="col py-2 mx-0 mt-md-1 rounded editInput" id="profileEditLanguage" placeholder="Select a Language">
+                                <option value="">Select</option>
+                            </select>
+                            <span id="editlangspan" class="col-12 px-2 text-start mb-1 alertSpan" style="font-weight: 400; color: #ff0000;">Select a language</span>
+                        </div>
+                    </div>
+                    
+                    <div class="row px-4">
+
+                        <div class="col-12 col-sm-6">
+                            <!-- <hr> -->
+                            <label class="col-12 px-0 m-0 text-start editLabel">Gender :</label>
+                            <!-- <div class="col-12 px-0 m-0" id="editInfoGender">prevGender</div> -->
+
+                            <div class="form-check mt-1">
+                                <label for=""
+                                    class="col-3 px-0 text-start form-check-label">Male</label>
+                                <input type="radio" name="gender" id="profileEditGenderMale"
+                                    class="profileEditGender" class="mx-2 form-check-input"
+                                    style="float: none  !important;" value="male">
+                            </div>
+
+                            <div class="form-check">
+                                <label for=""
+                                    class="col-3 px-0 text-start form-check-label">Female</label>
+                                <input type="radio" name="gender" id="profileEditGenderFemale"
+                                    class="profileEditGender" class="mx-2 form-check-input"
+                                    style="float: none  !important;" value="female">
+                            </div>
+
+                            <div class="form-check">
+                                <label for=""
+                                    class="col-3 px-0 text-start form-check-label">Other</label>
+                                <input type="radio" name="gender" id="profileEditGenderOther"
+                                    class="profileEditGender" class="mx-2 form-check-input"
+                                    style="float: none  !important;" value="other">
+                            </div>
+                            <span id="editgenderspan" class="col-12 px-2 text-start mb-1 alertSpan" style="font-weight: 400; color: #ff0000;">Select a gender</span>
+
+
+
+
+
+                            <!-- <div class="col-12 col-sm-6"> -->
+                                <!-- <hr> -->
+                                <label class="col-12 px-0 m-0 text-start editLabel">Address :</label>
+                                <!-- <div class="col-12 px-0 m-0" id="editInfoAddress">prevAddress</div> -->
+                                <textarea class="col p-2 mx-0 rounded editInput" rows="4" id="profileEditAddress">addressfull</textarea>
+                                <span id="editaddressspan" class="col-12 px-2 text-start mb-1 alertSpan" style="font-weight: 400; color: #ff0000;">Enter proper address</span>
+                            <!-- </div> -->
+
+                        </div>
+
+
+                        <div class="col-12 col-sm-6">
+                            <!-- <hr> -->
+                            <label class="col-12 px-0 m-0 text-start editLabel">Role (uneditable) :</label>
+                            <!-- <div class="col-12 px-0 m-0" id="editInfoRole">prevRole</div> -->
+                            <!-- <input class="col p-0 mx-0 text-center rounded editInput" id="profileEditRole">role</input> -->
+                            <div class="col-12 my-1">
+                                <div class="row">
+                                    <div class="col-5">
+                                        <div class="row">
+                                            <label class="col-6 px-0 text-center"
+                                                style="font-weight:500;" for="">Admin</label>
+                                            <input class="col-6 my-2" type="checkbox" name=""
+                                                id="profileEditAdminCheck">
+                                        </div>
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="row">
+                                            <label class="col-6 px-0 text-center" for="">Read</label>
+                                            <input class="my-2 col-6" type="checkbox" name=""
+                                                id="profileEditAdminReadCheck">
+                                        </div>
+                                        <div class="row">
+                                            <label class="col-6 px-0 text-center" for="">Write</label>
+                                            <input class=" my-2 col-6" type="checkbox" name=""
+                                                id="profileEditAdminWriteCheck">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 my-1">
+                                <hr id="roleHrTag">
+                                <div class="row">
+                                    <div class="col-5">
+                                        <div class="row">
+                                            <label class="col-6 px-0 text-center"
+                                                style="font-weight:500;" for="">User</label>
+                                            <input class="col-6 my-2" type="checkbox" name=""
+                                                id="profileEditUserCheck">
+                                        </div>
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="row">
+                                            <label class="col-6 px-0 text-center" for="">Read</label>
+                                            <input class="my-2 col-6" type="checkbox" name=""
+                                                id="profileEditUserReadCheck">
+                                        </div>
+                                        <div class="row">
+                                            <label class="col-6 px-0 text-center" for="">Write</label>
+                                            <input class=" my-2 col-6" type="checkbox" name=""
+                                                id="profileEditUserWriteCheck">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <span id="editrolespan" class="col-12 px-2 text-start mb-1 alertSpan" style="font-weight: 400; color: #ff0000;">Enter a valid role</span> -->
+
+
+
+                            <label class="col-12 px-0 m-0 text-end editLabel">Edit Skills :</label>
+                            <input type="text" name="" class="col p-2 mx-0 mt-md-2 rounded editInput" id="profileEditSkill" list="profileEditSkillList">
+                            <datalist id="profileEditSkillList">
+                                <option value="">Select an unique option</option>
+                            </datalist>
+                            
+                        </div>
+
+
+                    </div>
+                    
+
+                    <div class="row px-4">
+                        
+                        
+
+                    </div>
+                    
+                    <div class="row px-4">
+                        <div class="col-12 col-sm-6">
+                            <!-- <hr> -->
+                            
+                        </div>
+                        
+                        <div class="col-12 col-sm-6 d-flex align-items-center">
+                            <span id="editskillspan" class="col-12 py-md-4 py-sm-2 px-2 text-start mb-1 alertSpan" style="font-weight: 400; color: #ff0000;">Enter atleast one also unique skills</span>
+                        </div>
+                    </div>
+
+                    <div class="row px-4 mt-1 mb-3">
+                        <div class="col-12">
+                            <div class="px-1 d-flex flex-wrap text-nowrap" id="profileEditSkillPills"></div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="row px-4">
+
+                        <div class="col-12 col-sm-6">
+                            <!-- <hr> -->
+                            <label class="col-12 px-0 m-0 text-start editLabel">Change Password (opt) :</label>
+                            <!-- <div class="col-12 px-0 m-0" id="editInfoName">prevName</div> -->
+                            <input type="password" class="col p-2  mx-0 rounded editInput" id="profileEditPassword"></input>
+                            <span id="editpassspan" class="col-12 px-2 text-start mb-1 alertSpan" style="font-weight: 400; color: #ff0000;">Enter a valid password</span>
+                        </div>
+
+                        <div class="col-12 col-sm-6">
+                            <!-- <hr> -->
+                            <label class="col-12 px-0 m-0 text-start editLabel">Confirm Password :</label>
+                            <!-- <div class="col-12 px-0 m-0" id="editInfoName">prevName</div> -->
+                            <input type="password" class="col p-2  mx-0 rounded editInput" id="profileEditConfirmPassword"></input>
+                            <span id="editcpassspan" class="col-12 px-2 text-start mb-1 alertSpan" style="font-weight: 400; color: #ff0000;">Neatly confirm password</span>
+                       </div>
+
+                    </div>
+                    
+
+
+
+                    <div class="modal-footer">
+                        <div class="col-12 d-flex justify-content-evenly align-items-center">
+                            <div class="col-12 px-4">
+                                <button type="button" id="profileEditChangeButton"
+                                    class="w-75 pt-2 pb-2 fw-bolder btn-primary btn"
+                                    style="background-color: #06bab4; border-color:white;border-radius:10px;">Perform Changes</button>
+                            </div>
+                            <button type="button" class="btn btn-secondary px-2 px-sm-4 mx-4" data-dismiss="modal" style="position: absolute; right: 3%;border-radius:10px;">Close</button>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+    <!-- PROFILE EDIT SECTION MODAL ENDS HERE -->
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+    <!-- int tel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput.min.js"></script>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+    <script src="scripts/homePageJS.js"></script>
+</body>
+
+</html>
