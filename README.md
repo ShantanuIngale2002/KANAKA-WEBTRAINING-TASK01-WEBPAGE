@@ -1,0 +1,5 @@
+KANAKA TRAINING WEB TASK 01 - WEBPAGE - HTML w/ bootstrap 5, CSS w/ media queries and JS(local storage) w/ jquery - 22 FEB 2024 to currently on going.
+
+The plan in this project is to develop a completely responsive webpage that generally follows industrial standards of development through different stages of development that are generally assigned as a task by mentor. The process is like complete the given task hence completing one stage or component of complete project after which mentor will assign a new task.
+
+TASK PROCESSES YET : 22 FEB : Create a UI >> login page w/ forgot password modal and signup modal. 24 FEB : Implement functionalities to UI >> Coding JS scripts w/ jquery and embedding local storage in order to save data. 28 FEB : Creting a Home page that trrigerrs afer getting successfully loggedin, which contains navbar having profile button at right most of navbar containing three functionalities 1. Profile View,2. Profile Edit and 3. Log out. Everything is expected to work with negligible flaws.
